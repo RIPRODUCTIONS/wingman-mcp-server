@@ -1,0 +1,52 @@
+INFO:     Started server process [43141]
+INFO:     Waiting for application startup.
+2026-04-04 22:51:56,521 [INFO] mcp_server: === x402 MCP Server ===
+2026-04-04 22:51:56,521 [INFO] mcp_server: Wallet:        0x2615eB96b0f61c751E76021A0997a31895005e19
+2026-04-04 22:51:56,521 [INFO] mcp_server: Network:       base-sepolia
+2026-04-04 22:51:56,521 [INFO] mcp_server: Payment gate:  False
+2026-04-04 22:51:56,521 [INFO] mcp_server: Facilitator:   https://x402.org/facilitator
+2026-04-04 22:51:56,521 [INFO] mcp_server:   image_gen            $0.10
+2026-04-04 22:51:56,521 [INFO] mcp_server:   chat                 $0.002
+2026-04-04 22:51:56,521 [INFO] mcp_server:   scrape               $0.03
+2026-04-04 22:51:56,521 [INFO] mcp_server:   seo_audit            $0.05
+2026-04-04 22:51:56,521 [INFO] mcp_server:   content_gen          $0.01
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8402 (Press CTRL+C to quit)
+2026-04-04 22:53:11,864 [INFO] httpx: HTTP Request: GET https://google.com "HTTP/1.1 301 Moved Permanently"
+2026-04-04 22:53:12,044 [INFO] httpx: HTTP Request: GET https://www.google.com/ "HTTP/1.1 200 OK"
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [43141]
+INFO:     Started server process [44382]
+INFO:     Waiting for application startup.
+2026-04-04 22:54:28,794 [INFO] mcp_server: === x402 MCP Server ===
+2026-04-04 22:54:28,794 [INFO] mcp_server: Wallet:        0x2615eB96b0f61c751E76021A0997a31895005e19
+2026-04-04 22:54:28,794 [INFO] mcp_server: Network:       base-sepolia
+2026-04-04 22:54:28,794 [INFO] mcp_server: Payment gate:  False
+2026-04-04 22:54:28,794 [INFO] mcp_server: Facilitator:   https://x402.org/facilitator
+2026-04-04 22:54:28,794 [INFO] mcp_server:   image_gen            $0.10
+2026-04-04 22:54:28,794 [INFO] mcp_server:   chat                 $0.002
+2026-04-04 22:54:28,794 [INFO] mcp_server:   scrape               $0.03
+2026-04-04 22:54:28,794 [INFO] mcp_server:   seo_audit            $0.05
+2026-04-04 22:54:28,794 [INFO] mcp_server:   content_gen          $0.01
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8402 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [44382]
+INFO:     Started server process [44512]
+INFO:     Waiting for application startup.
+2026-04-04 22:54:43,464 [INFO] mcp_server: === x402 MCP Server ===
+2026-04-04 22:54:43,464 [INFO] mcp_server: Wallet:        0x2615eB96b0f61c751E76021A0997a31895005e19
+2026-04-04 22:54:43,464 [INFO] mcp_server: Network:       base
+2026-04-04 22:54:43,464 [INFO] mcp_server: Payment gate:  False
+2026-04-04 22:54:43,464 [INFO] mcp_server: Facilitator:   https://x402.org/facilitator
+2026-04-04 22:54:43,464 [INFO] mcp_server:   image_gen            $0.10
+2026-04-04 22:54:43,464 [INFO] mcp_server:   chat                 $0.002
+2026-04-04 22:54:43,464 [INFO] mcp_server:   scrape               $0.03
+2026-04-04 22:54:43,464 [INFO] mcp_server:   seo_audit            $0.05
+2026-04-04 22:54:43,464 [INFO] mcp_server:   content_gen          $0.01
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8402 (Press CTRL+C to quit)

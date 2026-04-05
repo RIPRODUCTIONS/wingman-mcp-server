@@ -1,0 +1,13 @@
+# Never commit wallet keys or DB
+data/wallet.json
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Local env overrides
+.env
+data/wallet.json
+.env
+__pycache__/
+*.pyc
+data/*.db

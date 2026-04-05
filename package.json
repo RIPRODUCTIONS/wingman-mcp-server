@@ -1,0 +1,6 @@
+{
+  "mcpName": "io.github.riproductions/wingman-mcp-server",
+  "name": "wingman-mcp-server",
+  "version": "1.0.0",
+  "description": "Pay-per-call AI services (image gen, LLM, SEO, scraping) via x402 on Base L2"
+}
