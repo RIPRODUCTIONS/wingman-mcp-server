@@ -1,13 +1,24 @@
-# Never commit wallet keys or DB
-data/wallet.json
-data/*.db
-data/*.db-shm
-data/*.db-wal
-
-# Local env overrides
-.env
-data/wallet.json
-.env
+# Python
 __pycache__/
-*.pyc
-data/*.db
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+# Envs
+.venv/
+venv/
+env/
+.python-version
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
