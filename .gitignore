@@ -11,3 +11,4 @@ data/wallet.json
 __pycache__/
 *.pyc
 data/*.db
+*.log
