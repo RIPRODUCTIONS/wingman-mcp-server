@@ -1,6 +1,5 @@
 # Python
 __pycache__/
-<<<<<<< Updated upstream
 *.py[cod]
 *.egg-info/
 .eggs/
@@ -23,8 +22,7 @@ htmlcov/
 .DS_Store
 .idea/
 .vscode/
-=======
-*.pyc
-data/*.db
+# Runtime data / logs / secrets
 *.log
->>>>>>> Stashed changes
+data/*.db
+data/wallet.json
