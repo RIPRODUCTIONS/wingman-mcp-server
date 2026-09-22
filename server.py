@@ -208,14 +208,24 @@ async def health():
 async def x402_discovery():
     """x402 discovery endpoint — lists all paid routes and their prices."""
     base_url = "http://localhost:8402"
-    routes = []
-    for path, (svc, price, desc) in {
+    intel_url = "http://localhost:8403"
+
+    mcp_routes = {
         "/api/generate-image":   ("image_gen",  config.PRICES["image_gen"],  "Flux Schnell image generation via ComfyUI"),
         "/api/chat":             ("chat",        config.PRICES["chat"],       "LLM chat completion via Ollama"),
         "/api/scrape":           ("scrape",      config.PRICES["scrape"],     "Web scraping and data extraction"),
         "/api/seo-audit":        ("seo_audit",   config.PRICES["seo_audit"],  "Full SEO audit"),
         "/api/generate-content": ("content_gen", config.PRICES["content_gen"],"AI content generation"),
-    }.items():
+    }
+
+    # Intel API routes (served on :8403, listed here for unified discovery)
+    intel_routes = {
+        "/api/intel/company":  ("intel_company",  "$1.00", "Competitive intelligence report — jobs, patents, SEC, GitHub, news synthesized by AI"),
+        "/api/intel/trending": ("intel_trending", "$0.50", "Top 10 most-requested companies this week"),
+    }
+
+    routes = []
+    for path, (svc, price, desc) in mcp_routes.items():
         routes.append({
             "path":        path,
             "method":      "POST",
@@ -224,6 +234,18 @@ async def x402_discovery():
             "network":     config.NETWORK,
             "description": desc,
             "resource":    f"{base_url}{path}",
+        })
+
+    for path, (svc, price, desc) in intel_routes.items():
+        method = "POST" if path == "/api/intel/company" else "GET"
+        routes.append({
+            "path":        path,
+            "method":      method,
+            "service":     svc,
+            "price":       price,
+            "network":     config.NETWORK,
+            "description": desc,
+            "resource":    f"{intel_url}{path}",
         })
 
     return {
