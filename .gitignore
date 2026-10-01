@@ -26,3 +26,10 @@ htmlcov/
 *.log
 data/*.db
 data/wallet.json
+
+# --- baseline: secrets + build artifacts (RIPRODUCTIONS) ---
+.env
+.env.*
+*.db
+node_modules/
+!.env.example
