@@ -2,6 +2,8 @@
 
 Pay-per-call AI services on Base L2 (USDC). No accounts, no subscriptions — agents pay automatically via x402 protocol.
 
+[![Deploy on Hostinger](https://assets.hostinger.com/vps/deploy.svg)](https://www.hostinger.com/docker-hosting?compose_url=https://raw.githubusercontent.com/RIPRODUCTIONS/wingman-mcp-server/main/docker-compose.yml&REFERRALCODE=UAHRIPPLEEOX)
+
 ## Services
 
 | Service | Price | Description |
@@ -38,6 +40,8 @@ All endpoints accept x402 payments in USDC on Base L2. The `/.well-known/x402` e
 - **Facilitator:** x402.org
 
 ## Self-Hosted
+
+[![Deploy on Hostinger](https://assets.hostinger.com/vps/deploy.svg)](https://www.hostinger.com/docker-hosting?compose_url=https://raw.githubusercontent.com/RIPRODUCTIONS/wingman-mcp-server/main/docker-compose.yml&REFERRALCODE=UAHRIPPLEEOX)
 
 Docker (builds from this repo; the data volume keeps the receiving wallet and the request log):
 
