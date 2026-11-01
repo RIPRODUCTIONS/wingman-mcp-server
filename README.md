@@ -6,7 +6,7 @@ Pay-per-call AI services on Base L2 (USDC). No accounts, no subscriptions — ag
 
 ## Pay per call with x402 (no account, no API key)
 
-Three live web verbs answer an unpaid request with HTTP 402 and accept an x402 v2 payment in USDC on Base. Prices are the ones served today by [`/.well-known/x402`](https://agent.wingmanprotocol.com/.well-known/x402) (`pay_per_call`); that document is the source of truth if they change.
+Hosted at `agent.wingmanprotocol.com` (the self-hosted server below does not serve these `/v1/*` routes). Three live web verbs answer an unpaid request with HTTP 402 and accept an x402 v2 payment in USDC on Base. Prices are the ones served today by [`/.well-known/x402`](https://agent.wingmanprotocol.com/.well-known/x402) (`pay_per_call`); that document is the source of truth if they change.
 
 | Endpoint | Price per call | Body |
 |---|---|---|
