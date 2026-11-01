@@ -39,8 +39,23 @@ All endpoints accept x402 payments in USDC on Base L2. The `/.well-known/x402` e
 
 ## Self-Hosted
 
+Docker (builds from this repo; the data volume keeps the receiving wallet and the request log):
+
 ```bash
-pip install fastapi uvicorn httpx x402 beautifulsoup4 stripe
+curl -O https://raw.githubusercontent.com/RIPRODUCTIONS/wingman-mcp-server/main/docker-compose.yml
+docker compose up -d
+curl http://localhost:8402/health
+```
+
+It starts on testnet (`NETWORK=base-sepolia`) with payments off (`REQUIRE_PAYMENT=false`). Set `NETWORK=base` and
+`REQUIRE_PAYMENT=true` to take real USDC. The SEO audit, scrape and content endpoints work on their own; chat and
+image generation also need Ollama (`OLLAMA_URL`) and ComfyUI (`COMFYUI_URL`).
+
+Without Docker:
+
+```bash
+git clone https://github.com/RIPRODUCTIONS/wingman-mcp-server mcp_server
+pip install -r mcp_server/requirements.txt
 python -m uvicorn mcp_server.server:app --port 8402
 ```
 
@@ -54,4 +69,4 @@ python -m uvicorn mcp_server.server:app --port 8402
 
 ## License
 
-MIT
+Apache-2.0

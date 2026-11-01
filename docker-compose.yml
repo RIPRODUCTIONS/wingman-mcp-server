@@ -1,0 +1,24 @@
+# One-click deploy (Deploy on Hostinger button) or `docker compose up -d`.
+# Builds straight from GitHub, so this file is all a host needs.
+services:
+  wingman-mcp-server:
+    build: https://github.com/RIPRODUCTIONS/wingman-mcp-server.git#main
+    ports:
+      - "8402:8402"
+    environment:
+      - PORT=8402
+      # base-sepolia = testnet, no real money. Set to "base" for real USDC.
+      - NETWORK=${NETWORK:-base-sepolia}
+      # "true" makes every /api/* call pay via x402 before it runs.
+      - REQUIRE_PAYMENT=${REQUIRE_PAYMENT:-false}
+      # Optional: chat and image endpoints need these backends reachable.
+      - OLLAMA_URL=${OLLAMA_URL:-http://host.docker.internal:11434}
+      - COMFYUI_URL=${COMFYUI_URL:-http://host.docker.internal:8188}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      # Holds the receiving wallet (wallet.json) and the request log. Back it up.
+      - wingman-data:/app/mcp_server/data
+    restart: unless-stopped
+volumes:
+  wingman-data:
